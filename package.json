@@ -1,0 +1,8 @@
+{
+  "name": "gas_template",
+  "version": "1.0.0",
+  "main": "src/code.ts",
+  "repository": "git@github.com:kobakazu0429/gas_template.git",
+  "author": "kobakakzu0429 <kobakazu10@gmail.com>",
+  "license": "MIT"
+}
