@@ -49,27 +49,28 @@ yarn install
 
 ```bash
 yarn build
-# "build": yarn run lint && rimraf dist && webpack && cpx src/appsscript.json dist"
+# "build": "yarn run lint && rimraf dist && webpack && cpx src/appsscript.json dist"
 ```
 
 #### Push
 
 ```bash
-clasp push
+yarn push
+# "push": "yarn build && clasp push"
 ```
 
 #### Deploy
 
 ```bash
 yarn deploy
-# "deploy": yarn run build && clasp push"
+# "deploy": "yarn run build && clasp push"
 ```
 
 #### Lint
 
 ```bash
 yarn lint
-# "lint": "tslint --fix src/**/*.ts"
+# "lint": "tslint --fix  -c ./tslint.json src/**/*.ts"
 ```
 
 ## License
