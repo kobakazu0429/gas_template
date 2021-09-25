@@ -1,10 +1,10 @@
-import { NotFoundSheet, NotSetColumnName } from "./errors/sheetService";
+import { NotFoundSheet, NotSetColumnName } from "./errors/SheetService";
 
 export default class SheetService {
   constructor(private ssid: string, private sheetName: string) {
     try {
       const sheets = SpreadsheetApp.openById(this.ssid);
-      this.sheet = sheets.getSheetByName(this.sheetName);
+      this.sheet = sheets.getSheetByName(this.sheetName)!;
     } catch (error) {
       throw new NotFoundSheet(this.ssid);
     }
