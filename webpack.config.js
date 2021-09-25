@@ -3,11 +3,15 @@ const path = require("path");
 const GasPlugin = require("gas-webpack-plugin");
 const es3ifyPlugin = require("es3ify-webpack-plugin");
 
-module.exports = {
+module.exports = /** @type {import('webpack').Configuration} */ ({
   mode: "development",
   entry: "./src/index.ts",
   devtool: false,
-  output: { filename: "bundle.js", path: path.join(__dirname, "dist") },
+  output: {
+    filename: "bundle.js",
+    path: path.join(__dirname, "dist"),
+    clean: true,
+  },
   module: {
     rules: [
       {
@@ -22,4 +26,4 @@ module.exports = {
   },
   resolve: { extensions: [".ts"] },
   plugins: [new GasPlugin(), new es3ifyPlugin()],
-};
+});
