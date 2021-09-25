@@ -1,12 +1,11 @@
 {
   "name": "gas_template",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "src/index.ts",
   "scripts": {
-    "lint": "npm run lint:eslint && npm run lint:prettier",
-    "build": "yarn run lint && rimraf dist && webpack && cpx src/appsscript.json dist",
+    "lint": "yarn run lint:eslint && yarn run lint:prettier",
+    "build": "webpack && cpx src/appsscript.json dist",
     "deploy": "yarn run build && clasp push",
-    "push": "yarn build && clasp push",
     "lint:eslint": "eslint \"./{src,test}/**/*.{js,ts,tsx,svelte}\" --fix",
     "lint:prettier": "prettier \"./{src,test}/**/*.{js,ts,tsx,svelte}\" --write"
   },
