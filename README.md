@@ -52,13 +52,6 @@ yarn build
 # "build": "yarn run lint && rimraf dist && webpack && cpx src/appsscript.json dist"
 ```
 
-#### Push
-
-```bash
-yarn push
-# "push": "yarn build && clasp push"
-```
-
 #### Deploy
 
 ```bash

@@ -1,12 +1,10 @@
 {
   "compilerOptions": {
-    "typeRoots": ["node_modules/@types"],
     "sourceMap": true,
     "target": "es5",
     "module": "commonjs",
     "lib": ["es2015", "esnext"],
     "strict": true,
-    "strictNullChecks": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
@@ -14,7 +12,5 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
     "newLine": "LF"
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  }
 }
