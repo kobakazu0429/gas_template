@@ -1,4 +1,4 @@
-import ExtendableError from '../../errors/extendableError';
+import ExtendableError from "../../errors/extendableError";
 
 export class NotFoundSheet extends ExtendableError {
   constructor(ssid: string) {
@@ -11,7 +11,7 @@ export class NotFoundSheet extends ExtendableError {
 export class NotSetColumnName extends ExtendableError {
   constructor() {
     super(
-      'DB用のカラムが設定されていません。スプレッドシートを作成してください。'
+      "DB用のカラムが設定されていません。スプレッドシートを作成してください。"
     );
   }
 }

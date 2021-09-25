@@ -4,7 +4,8 @@ export const validateEmail = (targetEmail: string): boolean => {
 };
 
 export const validateImageURL = (targetURL: string): boolean => {
-  const re = /^(http|https):\/\/([\w-]+\.)+[\w-]+([\w-./?%&=]*)?\.(jpg|jpeg|png|gif|bmp)$/i;
+  const re =
+    /^(http|https):\/\/([\w-]+\.)+[\w-]+([\w-./?%&=]*)?\.(jpg|jpeg|png|gif|bmp)$/i;
   return re.test(targetURL);
 };
 

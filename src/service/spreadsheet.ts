@@ -1,4 +1,4 @@
-import { NotFoundSheet, NotSetColumnName } from './errors/sheetService';
+import { NotFoundSheet, NotSetColumnName } from "./errors/sheetService";
 
 export default class SheetService {
   constructor(private ssid: string, private sheetName: string) {
@@ -25,10 +25,7 @@ export default class SheetService {
   }
 
   public getCellValue(cell: string) {
-    return this.sheet
-      .getRange(cell)
-      .getValue()
-      .toString();
+    return this.sheet.getRange(cell).getValue().toString();
   }
 
   public getCellsValue(fromCell: string, toCell: string) {
